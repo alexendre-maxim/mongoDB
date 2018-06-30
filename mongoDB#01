@@ -1,0 +1,39 @@
+show dbs 
+// to show databases mongoDB
+show databases;
+// to show databases SQL
+use nameDatabase
+// to create a database if it doesn't exist or to use an existing database
+db 
+// will show the current database
+db.dropDatabase()
+// Delete database 
+db.createCollection(name,option)
+// to create a collection ( table ) with the name and options ( capped , autoIndexId , size , max )
+show collections
+// to show all collections inside the database
+db.nameCollection.drop()
+// to delete a collection 
+db.nameCollection.insert({object})
+// to insert data in collection
+show tables;
+// to show tables in SQL
+select * from nameTable
+// an SQL query to show all data of this table
+db.nameCollection.find()
+// to show all data of the collection
+db.nameCollection.findOne()
+// to show the first document of this collection
+db.nameCollection.find().pretty()
+// to show all documents of the collection each one alone
+db.sponsors.find({age:{$lt:'25'}})
+// is a condition to find the document who has an age less then 25 
+db.sponsors.find({age:{$gt:'25'}})
+// is a condition to find the document who has an age greater then 25 
+db.sponsors.find({age:{$lte:'25'}})
+// is a condition to find the document who has an age less then or equals to 25 
+db.sponsors.update({age:'22'},{name:'alexendre',age:'23'})
+// to update the age of the document that has the age equals to 22 to 23 
+db.sponsors.remove(query) 
+// to delete a document in the collection
+
